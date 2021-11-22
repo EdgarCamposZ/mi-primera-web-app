@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="Estilos.css">
+    <title>Reservasion</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <p class="p1">Nombre: <br>
+            <input class="input" type="text" v-model="nuevaPersona" @keyup.enter="agregarPersona" placeholder="Escriba su nombre"></p>
+        <p class="p1">Apellido: <br>
+            <input class="input" type="text" v-model="nuevoApellido" @keyup.enter="agregarPersona" placeholder="Escriba su apellido"></p>
+        <p class="p1">Cantidad: <br>
+            <input class="input" type="number" v-model="nuevaCantidad" @keyup.enter="agregarPersona" placeholder="Escriba su cantidad"></p>
+        <button v-on:click="agregarPersona" class="agregar">Agregar</button>
+
+        <ul>
+            <li v-for="Persona of Personas">
+                <h2>Salón {{Persona.id}}</h2>
+                <button @click="Persona.cantidad--" v-if="Persona.cantidad > 0">-</button> {{Persona.nombre}}{{Persona.Apellido}}
+                <input class="input2" type="number" v-model.number='Persona.cantidad'>
+
+
+                <button @click='Persona.cantidad++' v-if="Persona.cantidad < 8">
+                    +
+                </button>
+                <span v-if="Persona.cantidad === 0">Sin Personas</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="Javascript.js"></script>
+</body>
+
+</html>

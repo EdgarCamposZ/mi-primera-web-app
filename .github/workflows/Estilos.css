@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: rgba(4, 111, 252, 0.164);
+    ;
+}
+
+.p1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+button {
+    margin-bottom: 20px;
+    border-radius: 30px;
+    outline: none;
+}
+
+.input {
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+.input2 {
+    border-radius: 10px;
+    font-size: 25;
+    outline: none;
+    width: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.agregar {
+    margin-bottom: 15px;
+    font-size: x-large;
+    border-radius: 25px;
+    margin-left: 48%;
+}
+
+ul {
+    list-style: none;
+}
